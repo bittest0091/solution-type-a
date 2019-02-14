@@ -21,6 +21,45 @@ public class Main {
 	}
 	
 	public static int countClap(int number) {
-		return 0;
+		int tens = 0;
+		int ones = 0;
+		int claps = 0;
+		//System.out.println(numberString);
+		if (number < 10) {
+			ones =  number % 10;
+			if (ones == 3) {
+				claps += 1;
+			}
+			if (ones == 6) {
+				claps += 1;
+			}
+			if (ones == 9) {
+				claps += 1;
+			}
+			return claps;
+		}
+		else {
+			tens = number / 10;
+			ones =  number % 10;
+			if (tens == 3) {
+				claps += 1;
+			}
+			if (tens == 6) {
+				claps += 1;
+			}
+			if (tens == 9) {
+				claps += 1;
+			}
+			if (ones == 3) {
+				claps += 1;
+			}
+			if (ones == 6) {
+				claps += 1;
+			}
+			if (ones == 9) {
+				claps += 1;
+			}
+			return claps;
+		}
 	}
 }
